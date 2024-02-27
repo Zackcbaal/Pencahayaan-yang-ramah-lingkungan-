@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perhitungan efisiensi energi untuk rumah pintar</title>
+  <link rel="stylesheet" href="../../static/css/style.css"> 
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Hitung efisiensi energi rumahmu!</h1>
+      <p>Ambil inisiatif dan selesaikan masalah konsumsi energi yang berlebihan!</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <form action="{{ url_for('submit_form') }}" method="post" class="form">
+      <div class="user">
+        <ul class="user-info">
+            <li class="user-info__item">
+                <label for="name">Nama Anda</label>
+                <input type="text" name="name" id="name" placeholder="Masukkan nama lengkap Anda" required>
+            </li>
+            <li class="user-info__item">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Ketikkan email kamu" required>
+            </li>
+        </ul>
+        <!--Bidang untuk alamat dan nama-->
+        <ul class="address-date">
+            <li class="user-info__item">
+                <label for="address">Tentukan alamat Anda</label>
+                <input type="text" name="address" id="address" placeholder="Alamat Anda" required>
+            </li>
+            <li class="user-info__item">
+                <label for="date">Tentukan tanggal yang Anda rasa nyaman dengan kedatangan spesialis kami</label>
+                <input type="date" name="date" id="date" required>
+            </li>
+        </ul>
+      </div>
+      <button class="button" type="submit">Siap!</button>
+    </form>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>

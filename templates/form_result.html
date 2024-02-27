@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms' results</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Thank you for submitting the form!</h1>
+    <p>Your name: {{ data['name'] }}</p>
+    <p>Your email: {{ data['email'] }}</p>
+    <p>Your address: {{ data['address'] }}</p>
+    <p>Your date: {{ data['date'] }}</p>
+    {% endblock %}
+</body>
+</html>
+
